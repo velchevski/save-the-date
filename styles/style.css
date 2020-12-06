@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  background: url("/img/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+#save-the-date-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#save-the-date-card {
+  width: 785px;
+  height: 789px;
+  background: #FFFFFF;
+  box-shadow: 0 0 128px 0 rgba(2,22,49,0.25);
+  background-image: url("/img/frame.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  width: 525px;
+  height: 153px;
+  margin-top: 48px;
+  background-image: url("/img/headerBlock.svg");
+  background-repeat: no-repeat;
+}
+
+#content {
+  width: 527px;
+  height: 296px;
+  margin-top: 24px;
+  background-image: url("/img/contentBlock.svg");
+  background-repeat: no-repeat;
+}
+
+footer {
+  width: 528px;
+  height: 83px;
+  margin-top: 24px;
+  background-image: url("/img/footerBlock.svg");
+  background-repeat: no-repeat;
+}
+
+#cta {
+  display: block;
+  background: #021631;
+  color: #FBDCDC;
+  padding: 16px 48px;
+  font-size: 24px;
+  text-decoration: none;
+  margin-top: 48px;
+}
+
+
+@media (max-width: 800px) {
+  #save-the-date-card {
+    background-image: url("/img/frameTablet.svg");
+    background-position: 16px 16px;
+    width: 610px;
+    height: 800px;
+  }
+
+  header {
+    margin-top: 24px;
+  }
+
+  footer {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background: url("/img/bgMobile.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  #save-the-date-card {
+    width: 344px;
+    height: 571px;
+    background-image: url("/img/frameMobile.svg");
+    background-repeat: no-repeat;
+    background-position: 12px 12px;
+  }
+
+  header {
+    width: 298px;
+    height: 122px;
+    margin-top: 12px;
+    background-image: url("/img/headerMobile.svg");
+
+  }
+
+  #content {
+    width: 296px;
+    height: 212px;
+    margin-top: 16px;
+    background-image: url("/img/contentMobile.svg");
+  }
+
+  footer {
+    width: 296px;
+    height: 70px;
+    margin-top: 32px;
+    background-image: url("/img/footerMobile.svg");
+  }
+
+  #cta {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+}
+
+@media (max-width: 340px) {
+  #save-the-date-card {
+    background-image: none;
+  }
+}
+
+@media (max-height: 800px) {
+  #save-the-date-container {
+    height: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+
+  }
+}
