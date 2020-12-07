@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: white;
   background: url("/img/bg.png") no-repeat center center fixed;
@@ -15,7 +19,7 @@ body {
 
 #save-the-date-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
