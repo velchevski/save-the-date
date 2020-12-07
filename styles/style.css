@@ -25,13 +25,21 @@ body {
   width: 785px;
   height: 789px;
   background: #FFFFFF;
-  box-shadow: 0 0 128px 0 rgba(2,22,49,0.25);
+  box-shadow: 0 0 64px 0 rgba(2,22,49,0.3);
   background-image: url("/img/frame.svg");
   background-repeat: no-repeat;
   background-position: 10px 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  transform: scale3d(0.8, 0.8, 0.8);
+  animation: card-appear 0.3s ease-out forwards;
+}
+
+header, #content, footer, #cta {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  animation: content-appear 1.5s cubic-bezier(0.190, 1.000, 0.220, 1.000) forwards;
 }
 
 header {
@@ -40,6 +48,7 @@ header {
   margin-top: 48px;
   background-image: url("/img/headerBlock.svg");
   background-repeat: no-repeat;
+  animation-delay: 0.15s;
 }
 
 #content {
@@ -48,6 +57,7 @@ header {
   margin-top: 24px;
   background-image: url("/img/contentBlock.svg");
   background-repeat: no-repeat;
+  animation-delay: 0.25s;
 }
 
 footer {
@@ -55,7 +65,7 @@ footer {
   height: 83px;
   margin-top: 24px;
   background-image: url("/img/footerBlock.svg");
-  background-repeat: no-repeat;
+  animation-delay: 0.35s;
 }
 
 #cta {
@@ -66,8 +76,9 @@ footer {
   font-size: 24px;
   text-decoration: none;
   margin-top: 48px;
+  animation-delay: 0.45s;
+  font-family: 'Cormorant Infant', serif;
 }
-
 
 @media (max-width: 800px) {
   #save-the-date-card {
@@ -138,11 +149,38 @@ footer {
   }
 }
 
-@media (max-height: 800px) {
+@media (max-width: 320px) {
+  #save-the-date-card {
+    transform: scale3d(0.8, 0.8, 0.8);
+    animation: card-appear-small-device 0.3s ease-out forwards;
+  }
+}
+
+@media (max-height: 700px) {
   #save-the-date-container {
     height: auto;
     margin-top: 32px;
     margin-bottom: 32px;
+  }
+}
 
+@keyframes card-appear {
+  0%   { transform: scale3d(0.8, 0.8, 0.8); }
+  100% { transform: scale3d(1, 1, 1); }
+}
+
+@keyframes card-appear-small-device {
+  0%   { transform: scale3d(0.5, 0.5, 0.5); }
+  100% { transform: scale3d(0.9, 0.9, 0.9); }
+}
+
+@keyframes content-appear {
+  0%   {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
