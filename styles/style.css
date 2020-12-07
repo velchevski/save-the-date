@@ -37,13 +37,13 @@ body {
   align-items: center;
   flex-direction: column;
   transform: scale3d(0.8, 0.8, 0.8);
-  animation: card-appear 0.3s ease-out forwards;
+  animation: card-appear 2s cubic-bezier(0.190, 1.000, 0.220, 1.000) forwards;
 }
 
 header, #content, footer, #cta {
   opacity: 0;
   transform: translate3d(0, 24px, 0);
-  animation: content-appear 1.5s cubic-bezier(0.190, 1.000, 0.220, 1.000) forwards;
+  animation: content-appear 2s cubic-bezier(0.190, 1.000, 0.220, 1.000) forwards;
 }
 
 header {
@@ -52,7 +52,7 @@ header {
   margin-top: 48px;
   background-image: url("/img/headerBlock.svg");
   background-repeat: no-repeat;
-  animation-delay: 0.15s;
+  animation-delay: 0.20s;
 }
 
 #content {
@@ -61,7 +61,7 @@ header {
   margin-top: 24px;
   background-image: url("/img/contentBlock.svg");
   background-repeat: no-repeat;
-  animation-delay: 0.25s;
+  animation-delay: 0.30s;
 }
 
 footer {
@@ -69,7 +69,7 @@ footer {
   height: 83px;
   margin-top: 24px;
   background-image: url("/img/footerBlock.svg");
-  animation-delay: 0.35s;
+  animation-delay: 0.40s;
 }
 
 #cta {
@@ -80,7 +80,7 @@ footer {
   font-size: 24px;
   text-decoration: none;
   margin-top: 48px;
-  animation-delay: 0.45s;
+  animation-delay: 0.50s;
   font-family: 'Cormorant Infant', serif;
 }
 
