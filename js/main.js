@@ -2,7 +2,7 @@
 var konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 var current = 0;
 
-var keyHandler = function (event) {
+var konamiHandler = (event) => {
 
 	if (konamiCode.indexOf(event.key) < 0 || event.key !== konamiCode[current]) {
 		current = 0;
@@ -27,7 +27,7 @@ document.addEventListener('readystatechange', (event) => {
       var multiplier = i + 1;
       animatables[i].setAttribute("style", `animation-delay: ${multiplier*150}ms`);
     }
-    document.addEventListener('keydown', keyHandler, false);
+    document.addEventListener('keydown', konamiHandler, false);
     console.log(`%c
     =====================================================================
     ||  Greetings adventurer! You dug deep and stumbled onto a quest!  ||
