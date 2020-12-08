@@ -24,7 +24,8 @@ document.addEventListener('readystatechange', (event) => {
     var animatables = document.getElementsByClassName("animatable");
     for(var i = 0; i < animatables.length; i++) {
       animatables[i].classList.add("animate");
-      animatables[i].setAttribute("style", `animation-delay: ${i*200}ms`);
+      var multiplier = i + 1;
+      animatables[i].setAttribute("style", `animation-delay: ${multiplier*150}ms`);
     }
     document.addEventListener('keydown', keyHandler, false);
     console.log(`%c
